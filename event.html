@@ -8,17 +8,18 @@
 </head>
 <body>
     <div  class="sidebar" id="mySidebar">
+        <a><img style="width: 125px; height: 60px; position:fixed; margin-top: -20px;margin-left: -20px;" src="img/waves.gif" alt=""></a>
         <a style="font-size: xx-large;font-family: fantasy;">JB Radio</a>
         <a style="margin-top: 100px;" href="/">홈</a>
         <a href="/about.html">소개</a>
         <a href="/live.html">Live</a>
         <a href="/onair.html">방청 신청</a>
-        <a href="/contact.html">연락처</a>
+        <a href="/radiochart.html">라디오 음원 차트</a>
         <a href="/event.html">이벤트</a>
     </div>
     <div style="background-image: url(img/rps.png);" class="content-container" id="myContentContainer">
         <img style="margin-left: 20px; margin-top: 15px; width:70px;" src="img/logo.png" alt="JB Radio" class="logo-image">
-<div style="margin-left: 420px; margin-top: 170px;"><h1>가위바위보 게임</h1>
+<div style="margin-left: 420px; margin-top: 170px;"><h1 style="margin-left: 19%; color:green;">가위바위보 게임</h1>
     <div>2024년 8월 27일까지 가위바위를 이기신 분들에 한해 경품을 드리는 행사를 진행중입니다</div>
     <p id="output"></p></div>
     
@@ -34,20 +35,10 @@
         </footer>
     </div>
     <script>
-        var sidebar = document.getElementById('mySidebar');
-
-        sidebar.addEventListener('mouseover', function() {
-            sidebar.style.width = '200px';
-        });
-
-        sidebar.addEventListener('mouseout', function() {
-            sidebar.style.width = '60px';
-        });
-
         //가위 바위 보
         var msg;
         var user;
-
+    
         function getComputerValue(){
             var randomNumber = Math.floor(Math.random()*3)+1; // 1, 2, 3 중 하나의 값을 랜덤으로 생성
             if(randomNumber == 1){
@@ -58,28 +49,28 @@
                 return "보";
             }
         }
-
+    
         var com = getComputerValue();
-
+    
         do {
             user = prompt("가위, 바위, 보 중 하나를 선택하세요!!");
             if (user == com){
                 msg = "비겼습니다.";
             } else if (user == "가위" && com == "보"){
-                msg = "이겼습니다.";
+                msg = "축하합니다! <a href='win.html'>이곳</a>을 클릭하여 경품을 받으세요.";
             } else if (user == "가위" && com == "바위"){
                 msg = "졌습니다.";
             } else if (user == "바위" && com == "가위"){
-                msg = "이겼습니다.";
+                msg = "이겼습니다. <a href='win.html'>여기</a>를 클릭하여 이동하세요.";
             } else if (user == "바위" && com == "보"){
                 msg = "졌습니다.";
             } else if (user == "보" && com == "가위"){
                 msg = "졌습니다.";
             } else if (user == "보" && com == "바위"){
-                msg = "이겼습니다.";
+                msg = "이겼습니다. <a href='win.html'>여기</a>를 클릭하여 이동하세요.";
             }
             msg += "<br><br><h2>사용자 : " + user + "<br> 컴퓨터 : " + com + "";  // 추가: 사용자와 컴퓨터의 선택 표시
-
+    
         } while (user != "가위" && user != "바위" && user != "보");
         document.getElementById("output").innerHTML = msg;
     </script>
