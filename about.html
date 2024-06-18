@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JB Radio | No.1 FM Channel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div  class="sidebar" id="mySidebar">
+        <a><img style="width: 125px; height: 60px; position:fixed; margin-top: -20px;margin-left: -20px;" src="img/waves.gif" alt=""></a>
+        <a style="font-size: xx-large;font-family: fantasy;"> JB Radio</a>
+        <a style="margin-top: 100px;" href="/">홈</a>
+        <a href="/about.html">소개</a>
+        <a href="/live.html">Live</a>
+        <a href="/onair.html">방청 신청</a>
+        <a href="/contact.html">연락처</a>
+        <a href="/event.html">이벤트</a>
+    </div>
+    <div class="content-container" id="myContentContainer">
+        <div style="background-color: darkgray;"><img style="margin-left: 20px; margin-top: 0px; width:70px;" src="img/logo.png" alt="JB Radio" class="logo-image">
+<div class="backgoround-container"> <h1 style="margin-top: 100px; margin-left: -120px;text-align: center;">DJ 소개</h1><br><h3 style="margin-top: 30px; margin-left: -110px;text-align: center;">청취하고 싶은 DJ의 이미지를 클릭하세요<br> 링크를 통해 접속 가능합니다</h3>
+    <div style="margin-left: 40%;">
+    <div>박이슬의 즐거운 아침 92450524</div>
+    <img class="dj-image" src="img/dj1.png" onclick="showInfo1()" width="200" height="200">
+    <div>유선빈의 음악쇼 92113724</div>
+    <img class="dj-image" src="img/dj2.jpg" onclick="showInfo2()" width="200" height="200">
+    <div>임건희의 야호나라 91814333</div>
+    <img class="dj-image" src="img/dj03.jpg" onclick="showInfo3()" width="200" height="200">
+    <p id="info"></p>
+    </div>
+</div>
+</div>
+<footer style="padding-top: 0px; padding: 2% 35%; background-color: darkgray; ">
+    <h3 style="color:black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JB Radio</h3>
+    대표자명 : 박이슬,유선빈,임건희<br>
+    주소 : 경기도 고양시 덕양구 동헌로 305 (833호)<br>
+    통신판매업 신고 번호 : 123124-12341-1234<br>
+사업자 등록 번호 : 1234-1243-1234<br>
+고객센터 전화 : 02-123-4567<br>
+이용시간 : 9:00 ~ 18:00<br>
+</div>
+    </footer>
+    </div>
+
+    <script>
+        //확장 사이드바
+        var sidebar = document.getElementById('mySidebar');
+
+        sidebar.addEventListener('mouseover', function() {
+            sidebar.style.width = '200px';
+        });
+
+        sidebar.addEventListener('mouseout', function() {
+            sidebar.style.width = '60px';
+        });
+
+
+function showInfo1() {
+  document.getElementById("info").innerHTML = "921xxxx 유선빈 : <a href='http://blog1.com'>github</a>, <a href='http://sns1.com'>deployed</a>";
+}
+
+function showInfo2() {
+  document.getElementById("info").innerHTML = "924xxxx 박이슬 : <a href='http://blog2.com'>github</a>, <a href='http://sns2.com'>deployed</a>";
+}
+
+function showInfo3() {
+  document.getElementById("info").innerHTML = "91814333 임건희 : <a href='http://blog3.com'>github</a>, <a href='http://sns3.com'>deployed</a>";
+}
+    </script>
+</body>
+</html>

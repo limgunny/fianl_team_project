@@ -1,0 +1,107 @@
+/* 사이드 바 */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+body .JB-logo {
+
+}
+
+
+.sidebar {
+    position: fixed;
+    width: 60px;
+    height: 100%;
+    background-color: #333;
+    overflow: hidden;
+    transition: width 1s;
+}
+.sidebar .logo {
+    color: #f2f2f2;
+    padding: 20px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: opacity 1s;
+}
+.sidebar a {
+    display: block;
+    color: #f2f2f2;
+    padding: 20px;
+    text-decoration: none;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 1s;
+}
+.sidebar:hover {
+    width: 200px;
+}
+.sidebar:hover a {
+    opacity: 1;
+}
+/* 추가: 컨텐트 컨테이너 스타일 */
+.content-container {
+    margin-left: 60px;
+    transition: margin-left 1s;
+    
+}
+.backgoround-container{
+    padding-top: 70px; /* 상단에 50픽셀의 패딩 추가 */
+    background-image: url(img/bg1.png);
+    background-position: 100px 200px;
+    background-color: white;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+/* 사이드 바*/
+.sidebar:hover ~ .content-container {
+    margin-left: 200px;
+}
+/*index.html 이벤트 */
+h3{
+    color:green
+}
+
+
+
+/*이벤트 버튼*/
+.button {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    border: none;
+    border-radius: 0%;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button:hover {
+    border-radius: 0%;
+    width: 250px;
+    height: 250px
+}
+
+.table {
+    border-collapse: collapse; /* 테두리 사이의 간격 제거 */
+    width: 70%;
+}
+
+.table th, .table td {
+    border: 1px solid black; /* 테두리 설정 */
+    padding: 10px; /* 셀 안쪽 여백 설정 */
+    border-radius: 10px; /* 테두리 모서리 둥글게 설정 */
+}
+
+/*DJ소개 이미지*/
+.dj-image {
+    transition: transform 0.3s ease;
+}
+
+.dj-image:hover {
+    transform: scale(1.2);
+}
